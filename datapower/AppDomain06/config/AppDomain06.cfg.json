@@ -1,6 +1,6 @@
 {
   "@build":"365335",
-  "@timestamp":"Mon Oct 21 19:40:43 2024",
+  "@timestamp":"Mon Oct 21 19:41:11 2024",
   "configuration":[
     {
       "DomainSettings":{
@@ -1122,7 +1122,7 @@
         "@name":"fsh-https-gitops",
         "mAdminState":"enabled",
         "LocalAddress":"0.0.0.0",
-        "LocalPort":9449,
+        "LocalPort":"{{ change_HTTPSSourceProtocolHandler_fsh-https-gitops_LocalPort }}",
         "HTTPVersion":"HTTP/1.1",
         "AllowedFeatures":{
           "HTTP-1.0":"on",
