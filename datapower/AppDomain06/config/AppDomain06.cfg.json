@@ -1,6 +1,6 @@
 {
   "@build":"365335",
-  "@timestamp":"Mon Oct 21 19:09:24 2024",
+  "@timestamp":"Mon Oct 21 19:40:43 2024",
   "configuration":[
     {
       "DomainSettings":{
@@ -325,6 +325,44 @@
     {
       "SSHClientProfile":{
         "@name":"gitpops-ssh-client-profile",
+        "mAdminState":"enabled",
+        "UserName":"git",
+        "ProfileUsage":"sftp",
+        "SSHUserAuthentication":{
+          "publickey":"on",
+          "password":"off"
+        },
+        "UserPrivateKey":"sshkey",
+        "PersistentConnections":"on",
+        "PersistentConnectionTimeout":120,
+        "StrictHostKeyChecking":"off",
+        "Ciphers":[
+          "AES128-CTR",
+          "AES192-CTR",
+          "AES256-CTR",
+          "AES128-GCM_AT_OPENSSH.COM",
+          "AES256-GCM_AT_OPENSSH.COM"
+        ],
+        "KEXAlg":[
+          "CURVE25519-SHA256_AT_LIBSSH.ORG",
+          "ECDH-SHA2-NISTP256",
+          "ECDH-SHA2-NISTP384",
+          "ECDH-SHA2-NISTP521",
+          "DIFFIE-HELLMAN-GROUP-EXCHANGE-SHA256"
+        ],
+        "MACAlg":[
+          "UMAC-64_AT_OPENSSH.COM",
+          "UMAC-128_AT_OPENSSH.COM",
+          "HMAC-SHA2-256",
+          "HMAC-SHA2-512",
+          "HMAC-SHA1"
+        ],
+        "LegacyKex":"no"
+      }
+    },
+    {
+      "SSHClientProfile":{
+        "@name":"ssh-client-profile",
         "mAdminState":"enabled",
         "UserName":"git",
         "ProfileUsage":"sftp",
@@ -1315,7 +1353,7 @@
           "ProxyPolicyEnable":"off",
           "RemoteAddress":"",
           "RemotePort":0,
-          "UserName":"",
+          "UserName":null,
           "Password":null
         }
       }
